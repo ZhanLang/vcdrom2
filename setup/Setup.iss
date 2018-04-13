@@ -19,7 +19,7 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
 
-UsePreviousAppDir=yes
+UsePreviousAppDir=true
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -33,45 +33,47 @@ OutputBaseFilename=VCDRomSetup_{#MyDefOper}_{#MyAppVersion}
 SetupIconFile=bin\Logo.ico
 UninstallDisplayIcon   ={app}\{#MyAppExeName}
 Compression=lzma
-SolidCompression=yes
-
+SolidCompression=true
+VersionInfoDescription="{#MyAppName} 安装程序"
+VersionInfoCopyright="{#MyAppURL}"
 DisableWelcomePage=no
-DisableFinishedPage=no
+DisableFinishedPage=false
 
-DisableReadyPage=yes
-DisableStartupPrompt=yes
-DisableReadyMemo=yes
-DisableDirPage=no
-DisableProgramGroupPage=yes
-;PrivilegesRequired=admin
-ChangesAssociations=YES
+DisableReadyPage=true
+DisableStartupPrompt=true
+DisableReadyMemo=true
+DisableDirPage=false
+DisableProgramGroupPage=true
+PrivilegesRequired=admin
+ChangesAssociations=true
 CloseApplications=yes
+DirExistsWarning=no
 [Languages]
-Name: "chinesesimp"; MessagesFile: "compiler:Languages\ChineseSimp.isl"
+Name: chinesesimp; MessagesFile: compiler:Languages\ChineseSimp.isl
 
 
 
 [Files]
-Source: "bin\common file\mscom\*"; DestDir: "{app}\common file\mscom";  Flags: ignoreversion
-Source: "bin\drive\*";             DestDir: "{app}\drive";              Flags: ignoreversion
-Source: "bin\drive\sha1\x64\*";    DestDir: "{app}\drive\sha1\x64";     Flags: ignoreversion
-Source: "bin\drive\sha1\x86\*";    DestDir: "{app}\drive\sha1\x86";     Flags: ignoreversion
-Source: "bin\drive\sha1\*";        DestDir: "{app}\drive\sha1";         Flags: ignoreversion
+Source: bin\common file\mscom\*; DestDir: {app}\common file\mscom; Flags: ignoreversion
+Source: bin\drive\*; DestDir: {app}\drive; Flags: ignoreversion
+Source: bin\drive\sha1\x64\*; DestDir: {app}\drive\sha1\x64; Flags: ignoreversion
+Source: bin\drive\sha1\x86\*; DestDir: {app}\drive\sha1\x86; Flags: ignoreversion
+Source: bin\drive\sha1\*; DestDir: {app}\drive\sha1; Flags: ignoreversion
 
-Source: "bin\drive\sha256\x64\*";  DestDir: "{app}\drive\sha256\x64";   Flags: ignoreversion
-Source: "bin\drive\sha256\x86\*";  DestDir: "{app}\drive\sha256\x86";   Flags: ignoreversion
-Source: "bin\drive\sha256\*";      DestDir: "{app}\drive\sha256";       Flags: ignoreversion
-Source: "bin\script\*";            DestDir: "{app}\script";             Flags: ignoreversion
-Source: "bin\icon\*";              DestDir: "{app}\icon";               Flags: ignoreversion
-Source: "bin\*";                   DestDir: "{app}";                    Flags: ignoreversion
+Source: bin\drive\sha256\x64\*; DestDir: {app}\drive\sha256\x64; Flags: ignoreversion
+Source: bin\drive\sha256\x86\*; DestDir: {app}\drive\sha256\x86; Flags: ignoreversion
+Source: bin\drive\sha256\*; DestDir: {app}\drive\sha256; Flags: ignoreversion
+Source: bin\script\*; DestDir: {app}\script; Flags: ignoreversion
+Source: bin\icon\*; DestDir: {app}\icon; Flags: ignoreversion
+Source: bin\*; DestDir: {app}; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: {group}\{#MyAppName}; Filename: {app}\{#MyAppExeName}
+Name: {userdesktop}\{#MyAppName}; Filename: {app}\{#MyAppExeName}
 
 [Run]
-Filename: "{app}\DevCmd.exe";  Parameters: "install_drv" ; StatusMsg:"正在安装驱动，如果有提示，请予以放行..." ; Flags: runascurrentuser
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: {app}\DevCmd.exe; Parameters: """install_drv"""; StatusMsg: """正在安装驱动，如果有提示，请予以放行..."""; Flags: runascurrentuser
+Filename: {app}\{#MyAppExeName}; Description: {cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}; Flags: nowait postinstall skipifsilent
 
 [InstallDelete]
 Name: {app}; Type: filesandordirs
@@ -80,18 +82,18 @@ Name: {app}; Type: filesandordirs
 Name: {app}; Type: filesandordirs
 
 [Registry]
-Root: HKCR; Subkey: ".iso";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".nrg";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".mds";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".mdf";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".img";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".cue";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: ".ccd";                             ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletevalue;
-Root: HKCR; Subkey: "{#MyAppName}";                     ValueData: "{#MyAppName}";                      ValueType: string;  ValueName: "" ;                    Flags: uninsdeletekey;
-Root: HKCR; Subkey: "{#MyAppName}\DefaultIcon";         ValueData: "{app}\icon\iso.ico";                ValueType: string;  ValueName: "" ;
-Root: HKCR; Subkey: "{#MyAppName}\shell\open\command";  ValueData: """{app}\{#MyAppExeName}"" ""%1""";  ValueType: string;  ValueName: "" ;
+Root: HKCR; Subkey: .iso; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .nrg; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .mds; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .mdf; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .img; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .cue; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .ccd; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: {#MyAppName}; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletekey
+Root: HKCR; Subkey: {#MyAppName}\DefaultIcon; ValueData: {app}\icon\iso.ico; ValueType: string; ValueName: 
+Root: HKCR; Subkey: {#MyAppName}\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: 
 
-[code]
+[Code]
 procedure Explode(var Dest: TArrayOfString; Text: String; Separator: String);
 var
   i, p: Integer;
@@ -158,7 +160,7 @@ begin
   if CurStep = ssDone  then
   begin
       SetOper();
-     
+
   end;
 end;
 
@@ -186,9 +188,8 @@ end;
 function InitializeSetup(): boolean;
 begin
    result:=true;
- 
-end;
 
+end;
 
 
 
