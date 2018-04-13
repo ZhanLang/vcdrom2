@@ -82,13 +82,13 @@ Name: {app}; Type: filesandordirs
 Name: {app}; Type: filesandordirs
 
 [Registry]
-Root: HKCR; Subkey: .iso; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .nrg; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .mds; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .mdf; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .img; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .cue; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: .ccd; ValueData: {#MyAppName}; ValueType: string; ValueName: """"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .iso; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .nrg; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .mds; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .mdf; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .img; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .cue; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
+Root: HKCR; Subkey: .ccd; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletevalue
 Root: HKCR; Subkey: {#MyAppName}; ValueData: {#MyAppName}; ValueType: string; ValueName: ; Flags: uninsdeletekey
 Root: HKCR; Subkey: {#MyAppName}\DefaultIcon; ValueData: {app}\icon\iso.ico; ValueType: string; ValueName: 
 Root: HKCR; Subkey: {#MyAppName}\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: 
