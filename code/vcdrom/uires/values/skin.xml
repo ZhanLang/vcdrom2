@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<imglist name="skin_traymenu_icons" src="img:traymenu_icons" states="9" />
+	<imgframe src="IMG:image_bk_png" name="image_bk_png" />
+	<imgframe src="IMG:image_popwndframe_png" name="image_popwndframe_png" margin="20,20,20,20" />
+	<imglist src="IMG:image_sys_close_png" name="image_sys_close_png" states="4" />
+	<imglist src="IMG:image_sys_menu_png" name="image_sys_menu_png" states="4" />
+	<imglist src="IMG:image_sys_min_png" name="image_sys_min_png" states="4" />
+	<newScrollbar name="skin_new_scrollbar" srcVert="img:image_vscrollbar_png" srcHorz="img:image_hscrollbar_png" states="3" margin="4" />
+	<imgframe src="IMG:image_checking_png" name="image_checking_png" />
+</skin>

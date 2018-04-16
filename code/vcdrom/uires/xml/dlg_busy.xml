@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<SOUI name="window" title="@string/title" width="50" height="50" margin="0,5,5,5" wndType="8" toolWindow="1" margin="0,5,5,5" wndType="8" toolWindow="1">
+	<root cache="1" skin="image_bk_png">
+		<window pos="1,[,-1,-1" inset="0,0,0,0">
+			<window height="54" width="54" >
+				<RotateWindow AnimImg="img:image_checking_png" speed="8" turn="right" pos="0,0,54,54" />
+			</window>
+		</window>
+	</root>
+</SOUI>

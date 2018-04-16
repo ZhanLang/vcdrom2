@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<resource>
+	<UIDEF>
+		<file name="XML_INIT" path="uidef\init.xml" />
+	</UIDEF>
+	<LAYOUT>
+		<file name="XML_MAINWND" path="xml\dlg_main.xml" />
+		<file name="XML_DLG_BUSY" path="xml\dlg_busy.xml" />
+	</LAYOUT>
+	<values>
+		<file name="string" path="values\string.xml" />
+		<file name="color" path="values\color.xml" />
+		<file name="skin" path="values\skin.xml" />
+	</values>
+	<IMG>
+		<file name="traymenu_icons" path="image\traymenu_icons.png" />
+		<file name="image_bk_png" path="image\bk.png" />
+		<file name="image_popwndframe_png" path="image\popwndframe.png" />
+		<file name="image_sys_close_png" path="image\sys_close.png" />
+		<file name="image_sys_menu_png" path="image\sys_menu.png" />
+		<file name="image_sys_min_png" path="image\sys_min.png" />
+		<file name="image_vscrollbar_png" path="image\vscrollbar.png" />
+		<file name="image_hscrollbar_png" path="image\hscrollbar.png" />
+		<file name="image_checking_png" path="image\checking.png" />
+	</IMG>
+	<ICON>
+		<file name="ICON_LOGO" path="image\soui.ico" />
+	</ICON>
+	<translator>
+		<file name="lang_cn" path="translator\lang_cn.xml" />
+		<file name="lang_jp" path="translator\lang_jp.xml" />
+	</translator>
+	<SMENU>
+		<file name="menu_tray" path="xml\menu_tray.xml" />
+	</SMENU>
+</resource>
