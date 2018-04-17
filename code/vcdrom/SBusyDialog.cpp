@@ -17,7 +17,10 @@ INT_PTR SBusyDialog::DoModal(const std::function<void()> &f, HWND hParent/*=NULL
 {
 	CThreadEx().Do([=]{
 		f();
-		
+		while( !this->IsWindow())
+			Sleep(1);
+
+		Sleep(1000);
 		Post([=]{OnOK();});
 	});
 

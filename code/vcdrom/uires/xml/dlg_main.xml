@@ -7,7 +7,7 @@
 			<imgbtn name="btn_close" skin="image_sys_close_png" tip="关闭" />
 		</caption>
 		<window pos="5,[2,-5,-5">
-			<listview pos="2,[1,-0,-0" name="lv_cd_fix" dividerSize="0" wantTab="0" margin="0,0,0,0" colorBorder="#e5e5e5" sbSkin="skin_new_scrollbar">
+			<listview pos="2,[1,-150,-0" name="lv_cd_fix" dividerSize="0" wantTab="0" margin="0,0,0,0" colorBorder="#e5e5e5" sbSkin="skin_new_scrollbar" colorBkgnd="#e5e5e5">
 				<template padding="0,0,0,0" itemHeight="52" colorHover="#ffffff" colorSelected="#ffffff" trackMouseEvent="0" colorBorder="#e5e5e5">
 					<window width="48" height="48" pos="0,0" colorBkgnd="#e5e5e5">
 						<icon name="icon" pos="|-16,|-16" />
@@ -20,6 +20,8 @@
 					<button name="ListRemove">移除</button>
 				</template>
 			</listview>
+			<button name="BtnselImage">选择文件</button>
+			<button name="BtnRemoveAll">全部卸载</button>
 		</window>
 		<shellnotifyicon id="110" menu="SMENU:menu_tray" ico="ICON_LOGO:16" tip="110" />
 	</root>

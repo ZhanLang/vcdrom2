@@ -32,12 +32,6 @@ void CCDListAdapterFix::getView(int position, SWindow * pItem, pugi::xml_node xm
 		pItem->SetAttribute(L"colorSelected", L"#fafafa  ",TRUE);
 		pItem->SetAttribute(L"colorHover", L"#fafafa  ",TRUE);
 	}
-// 	else
-// 	{
-// 		pItem->SetAttribute(L"colorNormal", L"#fafafa  ",TRUE);
-// 		pItem->SetAttribute(L"colorSelected", L"#fafafa  ",TRUE);
-// 		pItem->SetAttribute(L"colorHover", L"#fafafa  ",TRUE);
-// 	}
 
 	CD_ITEM item = m_cdList[position];
 
@@ -47,7 +41,12 @@ void CCDListAdapterFix::getView(int position, SWindow * pItem, pugi::xml_node xm
 		pItem->FindChildByName(L"listMount")->SetVisible(FALSE);
 		pItem->FindChildByName(L"ListRemove")->SetVisible(TRUE);
 	}
-
+	else
+	{
+		pItem->FindChildByName(L"listUnmount")->SetVisible(FALSE);
+		pItem->FindChildByName(L"listMount")->SetVisible(TRUE);
+		pItem->FindChildByName(L"ListRemove")->SetVisible(TRUE);
+	}
 	if ( item.hIcon )
 	{
 		pItem->FindChildByName2<SIconWnd>(L"icon")->SetIcon(item.hIcon);

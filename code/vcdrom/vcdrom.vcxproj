@@ -96,7 +96,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(SOUIPATH)\bin;$(code_dir)\msdk\lib;..\..\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>utilitiesd.lib;souid.lib;setupapi.lib;VirtualCDCtl_d.lib;bzscore_d.lib;bzshlp_d.lib;ImageFormats_d.lib;stdlog_d.lib;syslay_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>utilitiesd.lib;souid.lib;setupapi.lib;VirtualCDCtl_d.lib;bzscore_d.lib;bzshlp_d.lib;ImageFormats_d.lib;stdlog_d.lib;syslay_d.lib;jsoncpp_d_mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ResourceCompile>
@@ -211,8 +211,10 @@
     <ClCompile Include="MainDlg.cpp" />
     <ClCompile Include="SBusyDialog.cpp" />
     <ClCompile Include="SChromeTabCtrl.cpp" />
+    <ClCompile Include="SDriveDialog.cpp" />
     <ClCompile Include="SHostDialogEx.cpp" />
     <ClCompile Include="SHostWndEx.cpp" />
+    <ClCompile Include="SMountDialog.cpp" />
     <ClCompile Include="SRadioBox2.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -239,9 +241,11 @@
     <ClInclude Include="SAnimator.h" />
     <ClInclude Include="SBusyDialog.h" />
     <ClInclude Include="SChromeTabCtrl.h" />
+    <ClInclude Include="SDriveDialog.h" />
     <ClInclude Include="SevenUnZipEx.h" />
     <ClInclude Include="SHostDialogEx.h" />
     <ClInclude Include="SHostWndEx.h" />
+    <ClInclude Include="SMountDialog.h" />
     <ClInclude Include="SRadioBox2.h" />
     <ClInclude Include="SRotateWindow.h" />
     <ClInclude Include="SSkinNewScrollBar.h" />

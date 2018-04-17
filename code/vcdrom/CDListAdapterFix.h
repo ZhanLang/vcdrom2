@@ -9,13 +9,31 @@ enum
 
 struct CD_ITEM 
 {
+	CD_ITEM()
+	{
+		cDrive = 0;
+		hIcon = 0;
+		bMount = FALSE;
+	}
 	SStringT strLabel;   //描述
 	SStringT strPath;	//路径
 	TCHAR	 cDrive;
 	HICON	 hIcon;
 	SStringT strTime;	//最后挂载时间
 	BOOL	bMount;		//是否挂载，失效的直接移除列表
+
 };
+
+inline bool operator < (const CD_ITEM& l, const CD_ITEM& r)
+{
+	return l.strPath.CompareNoCase( r.strPath) < 0;
+}
+
+inline bool operator == (const CD_ITEM& l, const CD_ITEM& r)
+{
+	return l.strPath.CompareNoCase( r.strPath) == 0;
+}
+
 
 typedef std::vector<CD_ITEM>	CCDList;
 class CCDListAdapterFix :

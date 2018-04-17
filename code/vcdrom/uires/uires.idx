@@ -6,6 +6,8 @@
 	<LAYOUT>
 		<file name="XML_MAINWND" path="xml\dlg_main.xml" />
 		<file name="XML_DLG_BUSY" path="xml\dlg_busy.xml" />
+		<file name="XML_DLG_MOUNT" path="xml\dlg_mount.xml" />
+		<file name="XML_DLG_DRIVE" path="xml\dlg_drive.xml" />
 	</LAYOUT>
 	<values>
 		<file name="string" path="values\string.xml" />
@@ -22,6 +24,11 @@
 		<file name="image_vscrollbar_png" path="image\vscrollbar.png" />
 		<file name="image_hscrollbar_png" path="image\hscrollbar.png" />
 		<file name="image_checking_png" path="image\checking.png" />
+		<file name="image_edit_png" path="image\edit.png" />
+		<file name="image_edit_dropdown_png" path="image\edit_dropdown.png" />
+		<file name="image_sys_close_min_png" path="image\sys_close_min.png" />
+		<file name="image_checkbox_png" path="image\checkbox.png" />
+		<file name="image_default_scrollbar_png" path="image\default_scrollbar.png" />
 	</IMG>
 	<ICON>
 		<file name="ICON_LOGO" path="image\soui.ico" />

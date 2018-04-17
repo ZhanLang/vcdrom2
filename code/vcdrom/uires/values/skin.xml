@@ -8,4 +8,9 @@
 	<imglist src="IMG:image_sys_min_png" name="image_sys_min_png" states="4" />
 	<newScrollbar name="skin_new_scrollbar" srcVert="img:image_vscrollbar_png" srcHorz="img:image_hscrollbar_png" states="3" margin="4" />
 	<imgframe src="IMG:image_checking_png" name="image_checking_png" />
+	<imgframe src="IMG:image_edit_png" name="image_edit_png" states="2" margin="5,5,5,5" />
+	<imgframe src="IMG:image_edit_dropdown_png" name="image_edit_dropdown_png" states="4" margin="6,6,6,6" />
+	<imglist src="IMG:image_sys_close_min_png" name="image_sys_close_min_png" states="4" />
+	<imglist src="IMG:image_checkbox_png" name="image_checkbox_png" states="8" />
+	<scrollbar src="IMG:image_default_scrollbar_png" name="image_default_scrollbar_png" margin="2" />
 </skin>

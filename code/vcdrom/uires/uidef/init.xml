@@ -8,6 +8,7 @@
 
 
   <style>
+	<class name="cls_edit" ncSkin="image_edit_png" margin-x="2" margin-y="2" />
     <class name="normalbtn" font="" colorText="#385e8b" colorTextDisable="#91a7c0" textMode="0x25" cursor="hand" margin-x="0"/>
     <class name="cls_btn_weblink" cursor="hand" colorText="#1e78d5" colorTextHover="#1e78d5" font="italic:1" fontHover="underline:1,italic:1" />
   </style>

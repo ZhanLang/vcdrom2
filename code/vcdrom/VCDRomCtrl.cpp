@@ -66,3 +66,39 @@ BOOL CVCDRomCtrl::IsMount(LPCWSTR lpDiskPath)
 	VirtualCDClient _VirtualCDClient;
 	return _VirtualCDClient.IsDiskConnected(wszKernelPath) == true;
 }
+
+CHAR CVCDRomCtrl::GetMountLatter(LPCWSTR lpszFile)
+{
+	VirtualCDClient _VirtualCDClient;
+	if ( !_VirtualCDClient.Valid())
+	{
+		return 0;
+	}
+
+	VirtualCDClient::VirtualCDList _VirtualCDList = _VirtualCDClient.GetVirtualDiskList();
+	for (VirtualCDClient::VirtualCDList::iterator it = _VirtualCDList.begin() ; it != _VirtualCDList.end() ; it++)
+	{
+		if ( _tcsicmp(it->ImageFile.c_str(), lpszFile) == 0 )
+			return it->DriveLetter;
+	}
+
+	return 0;
+}
+
+HRESULT CVCDRomCtrl::DisMountAll()
+{
+	VirtualCDClient _VirtualCDClient;
+	VirtualCDClient::VirtualCDList _VirtualCDList = _VirtualCDClient.GetVirtualDiskList();
+	for (VirtualCDClient::VirtualCDList::iterator it = _VirtualCDList.begin() ; it != _VirtualCDList.end() ; it++)
+	{
+		DisMount(it->ImageFile.c_str());
+	}
+
+	return S_OK;
+}
+
+BOOL  CVCDRomCtrl::DeviceValid()
+{
+	VirtualCDClient _VirtualCDClient;
+	return _VirtualCDClient.Valid() == true;
+}
