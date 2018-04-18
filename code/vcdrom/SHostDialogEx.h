@@ -12,6 +12,7 @@ public:
 
 	virtual void EndDialog(INT_PTR nResult);
 
+
 protected:
 	void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
 	void OnOK();

@@ -13,4 +13,18 @@
 	<imglist src="IMG:image_sys_close_min_png" name="image_sys_close_min_png" states="4" />
 	<imglist src="IMG:image_checkbox_png" name="image_checkbox_png" states="8" />
 	<scrollbar src="IMG:image_default_scrollbar_png" name="image_default_scrollbar_png" margin="2" />
+	<imgframe src="IMG:image_bg_check_update_png" name="image_bg_check_update_png" />
+	<imgframe src="IMG:image_bg_dialog_red_png" name="image_bg_dialog_red_png" />
+	<imgframe src="IMG:image_white_png" name="image_white_png" />
+	<imgframe src="IMG:image_up_prgrs_png" name="image_up_prgrs_png" />
+	<imgframe src="IMG:image_up_Progress_bg_png" name="image_up_Progress_bg_png" />
+	<imglist src="IMG:image_cancel_png" name="image_cancel_png" states="4" />
+	<imglist src="IMG:image_ok_png" name="image_ok_png" states="4" />
+	<imgframe src="IMG:image_data_sync_transmit_yes_png" name="image_data_sync_transmit_yes_png" />
+	<imgframe src="IMG:image_logo_png" name="image_logo_png" />
+	<imgframe src="IMG:image_Progress_bg_png" name="image_Progress_bg_png" />
+	<imgframe src="IMG:image_Progress_top_png" name="image_Progress_top_png" />
+	<imglist src="IMG:image_sys_checkbox_png" name="image_sys_checkbox_png" />
+	<gif src="IMG:image_wait_gif" name="image_wait_gif" />
+	<imglist src="IMG:image_btnReTry_png" name="image_btnReTry_png" states="4"  />
 </skin>

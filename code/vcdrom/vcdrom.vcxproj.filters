@@ -110,6 +110,12 @@
     <ClCompile Include="SDriveDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dlgUpdate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Downloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="vcdrom.rc">
@@ -181,6 +187,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDriveDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgUpdate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Downloader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

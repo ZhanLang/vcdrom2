@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bzshlp", "code\BazisLib\bzs
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "soui", "..\souilib\SOUI\soui.vcxproj", "{900D15EA-A5B7-3DFE-A7FA-0D5E38720041}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DevCmd", "code\DevCmd\DevCmd.vcxproj", "{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug (KEXT)|Win32 = Debug (KEXT)|Win32
@@ -242,6 +244,42 @@ Global
 		{900D15EA-A5B7-3DFE-A7FA-0D5E38720041}.Release|Win32.ActiveCfg = Release|Win32
 		{900D15EA-A5B7-3DFE-A7FA-0D5E38720041}.Release|Win32.Build.0 = Release|Win32
 		{900D15EA-A5B7-3DFE-A7FA-0D5E38720041}.Release|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (KEXT)|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (KEXT)|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (KEXT)|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Posix)|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Posix)|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Posix)|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Win32)|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Win32)|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (Win32)|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel)|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel)|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel)|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel-WDK7)|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel-WDK7)|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug (WinKernel-WDK7)|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug|Win32.Build.0 = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Debug|x64.ActiveCfg = Debug|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (ANSI)|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (ANSI)|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (ANSI)|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Posix)|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Posix)|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Posix)|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Win32)|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Win32)|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (Win32)|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel)|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel)|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel)|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel-WDK7)|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel-WDK7)|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release (WinKernel-WDK7)|x64.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release|Win32.ActiveCfg = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release|Win32.Build.0 = Release|Win32
+		{6C310D6E-22DD-4A60-BC09-C0ED8087AF0E}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

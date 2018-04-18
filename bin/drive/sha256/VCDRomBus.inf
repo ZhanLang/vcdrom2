@@ -1,0 +1,63 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=SCSIAdapter
+ClassGuid={4d36e97b-e325-11ce-bfc1-08002be10318}
+Provider=%JICER%
+DriverVer=06/02/2015, 4.01.0001
+CatalogFile.Nt=VCDRomBus_86.cat
+CatalogFile.NtAMD64=VCDRomBus_64.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames.x86]
+1 = %DiskId1%,,,
+
+[SourceDisksNames.amd64]
+1 = %DiskId1%,,,
+
+[SourceDisksFiles.x86]
+VCDRomBus.sys  = 1,\x86
+
+[SourceDisksFiles.amd64]
+VCDRomBus.sys  = 1,\x64
+
+[Manufacturer]
+%JICER%=Standard, NTamd64
+
+[Standard]
+%VCDRomBus.DeviceDesc%=VCDRomBus_Device, root\VCDRomBus
+
+[Standard.NTamd64]
+%VCDRomBus.DeviceDesc%=VCDRomBus_Device, root\VCDRomBus
+
+[VCDRomBus_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+VCDRomBus.sys,,,2
+
+;-------------- Service installation
+[VCDRomBus_Device.NT.Services]
+AddService = VCDRomBus,%SPSVCINST_ASSOCSERVICE%, dev_Service_Inst
+
+;add reg
+[Gc]
+HKLM,"SYSTEM\CurrentControlSet\services\VCDRomBus\Parameters","GrantAccessToEveryone",0x00010001,1
+
+; -------------- busenum driver install sections
+[dev_Service_Inst]
+DisplayName    = %dev.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\VCDRomBus.sys
+LoadOrderGroup = Extended Base
+addREG=Gc
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+JICER = "jicer.cn"
+DiskId1 = "VCDRomBus installation directory"
+VCDRomBus.DeviceDesc = "VCDRomBus Virtual Bus"
+dev.SVCDESC = "VCDRomBus Virtual Bus Driver"

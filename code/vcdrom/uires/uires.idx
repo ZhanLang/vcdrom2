@@ -8,6 +8,7 @@
 		<file name="XML_DLG_BUSY" path="xml\dlg_busy.xml" />
 		<file name="XML_DLG_MOUNT" path="xml\dlg_mount.xml" />
 		<file name="XML_DLG_DRIVE" path="xml\dlg_drive.xml" />
+		<file name="XML_DLG_UPDATE" path="xml\dlg_update.xml" />
 	</LAYOUT>
 	<values>
 		<file name="string" path="values\string.xml" />
@@ -29,6 +30,20 @@
 		<file name="image_sys_close_min_png" path="image\sys_close_min.png" />
 		<file name="image_checkbox_png" path="image\checkbox.png" />
 		<file name="image_default_scrollbar_png" path="image\default_scrollbar.png" />
+		<file name="image_bg_check_update_png" path="image\bg_check_update.png" />
+		<file name="image_bg_dialog_red_png" path="image\bg_dialog_red.png" />
+		<file name="image_white_png" path="image\white.png" />
+		<file name="image_up_prgrs_png" path="image\up_prgrs.png" />
+		<file name="image_up_Progress_bg_png" path="image\up_Progress_bg.png" />
+		<file name="image_cancel_png" path="image\cancel.png" />
+		<file name="image_ok_png" path="image\ok.png" />
+		<file name="image_data_sync_transmit_yes_png" path="image\data_sync_transmit_yes.png" />
+		<file name="image_logo_png" path="image\logo.png" />
+		<file name="image_Progress_bg_png" path="image\Progress_bg.png" />
+		<file name="image_Progress_top_png" path="image\Progress_top.png" />
+		<file name="image_sys_checkbox_png" path="image\sys_checkbox.png" />
+		<file name="image_wait_gif" path="image\wait.gif" />
+		<file name="image_btnReTry_png" path="image\btnReTry.png" />
 	</IMG>
 	<ICON>
 		<file name="ICON_LOGO" path="image\soui.ico" />
