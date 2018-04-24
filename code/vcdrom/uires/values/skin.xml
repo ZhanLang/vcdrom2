@@ -26,5 +26,13 @@
 	<imgframe src="IMG:image_Progress_top_png" name="image_Progress_top_png" />
 	<imglist src="IMG:image_sys_checkbox_png" name="image_sys_checkbox_png" />
 	<gif src="IMG:image_wait_gif" name="image_wait_gif" />
-	<imglist src="IMG:image_btnReTry_png" name="image_btnReTry_png" states="4"  />
+	<imglist src="IMG:image_btnReTry_png" name="image_btnReTry_png" states="4" />
+	<imglist src="IMG:image_btnRemove_png" name="image_btnRemove_png" states="3" />
+	<imglist src="IMG:image_btnSelete_png" name="image_btnSelete_png" states="3" />
+	<imglist src="IMG:image_btnUnMount_png" name="image_btnUnMount_png" states="3" />
+	<imglist src="IMG:image_listBtnOpen_png" name="image_listBtnOpen_png" states="3" />
+	<imglist src="IMG:image_listBtnRemove_png" name="image_listBtnRemove_png" states="3" />
+	<imglist src="IMG:image_listBtnMount_png" name="image_listBtnMount_png" states="3" />
+	<imglist src="IMG:image_listBtnUnMount_png" name="image_listBtnUnMount_png" states="3" />
+	<imgframe src="IMG:image_defaultIco_png" name="image_defaultIco_png" />
 </skin>

@@ -24,13 +24,11 @@
 				</page>
 				<page name="finesh" pos="0,0,-0,-0" inset="0,0,0,0">
 					<text pos="155,40" font="face:微软雅黑,size:18" Colortext="#000000" multiLines="1" align="center" readOnly="1" transparent="1">安装成功</text>
-					
 					<hr colorLine="#e5e5e5" size="1" mode="horizontal" pos="0,-41,-0,-40" />
 					<imgbtn name="btnOk" skin="image_ok_png" pos="150,-37" />
 				</page>
 				<page name="error" pos="0,0,-0,-0" inset="0,0,0,0">
 					<text pos="150,30" font="face:微软雅黑,size:18" Colortext="#000000" multiLines="1" align="center" readOnly="1" transparent="1">安装失败</text>
-					
 					<hr colorLine="#e5e5e5" size="1" mode="horizontal" pos="0,-41,-0,-40" />
 					<imgbtn name="btnRetry" skin="image_btnReTry_png" pos="70,[+3" />
 					<imgbtn name="btnCancel" skin="image_cancel_png" pos="-155,{" />

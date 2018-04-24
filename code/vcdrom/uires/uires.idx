@@ -44,6 +44,14 @@
 		<file name="image_sys_checkbox_png" path="image\sys_checkbox.png" />
 		<file name="image_wait_gif" path="image\wait.gif" />
 		<file name="image_btnReTry_png" path="image\btnReTry.png" />
+		<file name="image_btnRemove_png" path="image\btnRemove.png" />
+		<file name="image_btnSelete_png" path="image\btnSelete.png" />
+		<file name="image_btnUnMount_png" path="image\btnUnMount.png" />
+		<file name="image_listBtnOpen_png" path="image\listBtnOpen.png" />
+		<file name="image_listBtnRemove_png" path="image\listBtnRemove.png" />
+		<file name="image_listBtnMount_png" path="image\listBtnMount.png" />
+		<file name="image_listBtnUnMount_png" path="image\listBtnUnMount.png" />
+		<file name="image_defaultIco_png" path="image\defaultIco.png" />
 	</IMG>
 	<ICON>
 		<file name="ICON_LOGO" path="image\logo.ico" />

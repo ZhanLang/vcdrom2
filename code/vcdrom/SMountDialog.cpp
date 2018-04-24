@@ -60,7 +60,7 @@ BOOL SMountDialog::OnInitDialog(HWND wndFocus, LPARAM lInitParam)
 	}
 
 	//´ÓCÅÌ¿ªÊ¼
-	for ( TCHAR cLatter = 'D' ; cLatter < 'Z' ; cLatter++)
+	for ( TCHAR cLatter = 'D' ; cLatter <= 'Z' ; cLatter++)
 	{
 		BOOL bFind = FALSE;
 		for ( DWORD dwLoop = 0 ; dwLoop < dwUseLetterCount ; dwLoop++)
@@ -76,7 +76,7 @@ BOOL SMountDialog::OnInitDialog(HWND wndFocus, LPARAM lInitParam)
 		{
 			TCHAR szLetter[] = _T("?:");
 			szLetter[0] = cLatter;
-			pCombox->InsertItem(0, szLetter, 0, NULL);
+			pCombox->InsertItem(pCombox->GetCount(), szLetter, 0, NULL);
 		}
 	}
 

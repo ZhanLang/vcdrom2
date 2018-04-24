@@ -20,7 +20,7 @@ INT_PTR SBusyDialog::DoModal(const std::function<void()> &f, HWND hParent/*=NULL
 		while( !this->IsWindow())
 			Sleep(1);
 
-		Sleep(1000);
+		Sleep(200);
 		Post([=]{OnOK();});
 	});
 

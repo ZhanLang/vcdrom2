@@ -22,17 +22,29 @@ struct CD_ITEM
 	SStringT strTime;	//最后挂载时间
 	BOOL	bMount;		//是否挂载，失效的直接移除列表
 
+	bool operator < (CD_ITEM const& _A) const//升序排列
+	{
+		return false;
+	}
+
+	bool operator ==(CD_ITEM const& _A) const
+	{
+		return strPath.CompareNoCase(_A.strPath) == 0;
+	}
 };
 
+/*
 inline bool operator < (const CD_ITEM& l, const CD_ITEM& r)
 {
 	return l.strPath.CompareNoCase( r.strPath) < 0;
 }
+*/
 
-inline bool operator == (const CD_ITEM& l, const CD_ITEM& r)
-{
-	return l.strPath.CompareNoCase( r.strPath) == 0;
-}
+
+// inline bool operator == (const CD_ITEM& l, const CD_ITEM& r)
+// {
+// 	return l.strPath.CompareNoCase( r.strPath) == 0;
+// }
 
 
 typedef std::vector<CD_ITEM>	CCDList;
@@ -50,6 +62,7 @@ public:
 
 private:
 	void subscribeEvent( SWindow* pWnd);
+	void unsubscribeEvent( SWindow* pWnd);
 	bool OnButtonClick(EventCmd *pEvt);
 };
 
