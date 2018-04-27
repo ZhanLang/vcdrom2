@@ -27,7 +27,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 
-LicenseFile=bin\License_cn.txt
+LicenseFile=License_cn.txt
 OutputDir=release
 OutputBaseFilename=VCDRomSetup_{#MyDefOper}_{#MyAppVersion}
 SetupIconFile=bin\Logo.ico
@@ -54,7 +54,6 @@ Name: chinesesimp; MessagesFile: compiler:Languages\ChineseSimp.isl
 
 
 [Files]
-Source: bin\common file\mscom\*; DestDir: {app}\common file\mscom; Flags: ignoreversion
 Source: bin\drive\*; DestDir: {app}\drive; Flags: ignoreversion
 Source: bin\drive\sha1\x64\*; DestDir: {app}\drive\sha1\x64; Flags: ignoreversion
 Source: bin\drive\sha1\x86\*; DestDir: {app}\drive\sha1\x86; Flags: ignoreversion
@@ -63,7 +62,6 @@ Source: bin\drive\sha1\*; DestDir: {app}\drive\sha1; Flags: ignoreversion
 Source: bin\drive\sha256\x64\*; DestDir: {app}\drive\sha256\x64; Flags: ignoreversion
 Source: bin\drive\sha256\x86\*; DestDir: {app}\drive\sha256\x86; Flags: ignoreversion
 Source: bin\drive\sha256\*; DestDir: {app}\drive\sha256; Flags: ignoreversion
-Source: bin\script\*; DestDir: {app}\script; Flags: ignoreversion
 Source: bin\icon\*; DestDir: {app}\icon; Flags: ignoreversion
 Source: bin\*; DestDir: {app}; Flags: ignoreversion
 
