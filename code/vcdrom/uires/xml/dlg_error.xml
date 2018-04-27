@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<SOUI name="window" title="@string/title" width="450" height="240" margin="0,5,5,5" appwin="0" ncRect="10,10,10,10" resize="0" translucent="255">
+	<root skin="image_popwndframe_png" cache="1" inset="10,10,10,10">
+		<window pos="0,0,-0,-0" >
+			<caption pos="0,0,-0,40" show="1" font="adding:0" skin="image_bg_dialog_red_png">
+				<text pos="[+10,9" font="face:微软雅黑,size:19" colortext="#ffffff">挂载镜像文件失败</text>
+				<imgbtn id="2" skin="image_sys_close_min_png" pos="-40,0" tip="关闭" />
+			</caption>
+			<window pos="5,[2,-5,-5" skin="">
+				<text font="face:微软雅黑,size:20,bold:0" pos="110,50" Colortext="#6b6b6b">未知或损坏的镜像文件</text>
+				
+				<imgbtn pos="|-109,120" id="2" skin="image_btnOk_png"/>
+			</window>
+		</window>
+	</root>
+</SOUI>

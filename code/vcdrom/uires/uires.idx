@@ -9,6 +9,7 @@
 		<file name="XML_DLG_MOUNT" path="xml\dlg_mount.xml" />
 		<file name="XML_DLG_DRIVE" path="xml\dlg_drive.xml" />
 		<file name="XML_DLG_UPDATE" path="xml\dlg_update.xml" />
+		<file name="XML_DLG_ERROR" path="xml\dlg_error.xml" />
 	</LAYOUT>
 	<values>
 		<file name="string" path="values\string.xml" />
@@ -52,6 +53,11 @@
 		<file name="image_listBtnMount_png" path="image\listBtnMount.png" />
 		<file name="image_listBtnUnMount_png" path="image\listBtnUnMount.png" />
 		<file name="image_defaultIco_png" path="image\defaultIco.png" />
+		<file name="image_btnCancel_png" path="image\btnCancel.png" />
+		<file name="image_btnMount_png" path="image\btnMount.png" />
+		<file name="image_btnOk_png" path="image\btnOk.png" />
+		<file name="image_btnOkBlue_png" path="image\btnOkBlue.png" />
+		<file name="image_btnCancelRed_png" path="image\btnCancelRed.png" />
 	</IMG>
 	<ICON>
 		<file name="ICON_LOGO" path="image\logo.ico" />

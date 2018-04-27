@@ -24,7 +24,7 @@
 	<imgframe src="IMG:image_logo_png" name="image_logo_png" />
 	<imgframe src="IMG:image_Progress_bg_png" name="image_Progress_bg_png" />
 	<imgframe src="IMG:image_Progress_top_png" name="image_Progress_top_png" />
-	<imglist src="IMG:image_sys_checkbox_png" name="image_sys_checkbox_png" />
+	<imglist src="IMG:image_sys_checkbox_png" name="image_sys_checkbox_png" states="8" />
 	<gif src="IMG:image_wait_gif" name="image_wait_gif" />
 	<imglist src="IMG:image_btnReTry_png" name="image_btnReTry_png" states="4" />
 	<imglist src="IMG:image_btnRemove_png" name="image_btnRemove_png" states="3" />
@@ -35,4 +35,9 @@
 	<imglist src="IMG:image_listBtnMount_png" name="image_listBtnMount_png" states="3" />
 	<imglist src="IMG:image_listBtnUnMount_png" name="image_listBtnUnMount_png" states="3" />
 	<imgframe src="IMG:image_defaultIco_png" name="image_defaultIco_png" />
+	<imglist src="IMG:image_btnCancel_png" name="image_btnCancel_png" states="3" />
+	<imglist src="IMG:image_btnMount_png" name="image_btnMount_png" states="3" />
+	<imglist src="IMG:image_btnOk_png" name="image_btnOk_png" states="3" />
+	<imglist src="IMG:image_btnOkBlue_png" name="image_btnOkBlue_png" states="3" />
+	<imglist src="IMG:image_btnCancelRed_png" name="image_btnCancelRed_png" states="3" />
 </skin>

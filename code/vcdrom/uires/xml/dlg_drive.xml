@@ -2,11 +2,11 @@
 <SOUI name="window" title="@string/title" width="420" height="220" margin="0,5,5,5" wndType="8" toolWindow="1" margin="0,5,5,5" wndType="8" toolWindow="1" translucent="255">
 	<root skin="image_popwndframe_png" cache="1" inset="10,10,10,10">
 		<window pos="0,0,-0,-0" skin="image_bg_dialog_red_png">
-			<caption name="caption" pos="0,0,-0,45" show="2" cache="1">
-				<img skin="image_logo_png" pos="10,5" />
-				<text pos="[+10,8" font="face:微软雅黑,size:20" colortext="#ffffff">驱动程序异常</text>
+			<caption name="caption" pos="0,0,-0,40" show="2" cache="1">
+				
+				<text pos="[+10,8" font="face:微软雅黑,size:18" colortext="#ffffff">驱动程序异常</text>
 				<window pos="36,0,-255,-0" msgTransparent="1" />
-				<imgbtn id="2" name="btn_close" skin="image_sys_close_png" pos="-55,0" />
+				<imgbtn id="2" skin="image_sys_close_min_png" pos="-40,0" tip="关闭" />
 			</caption>
 			<tabctrl pos="0,[,-0,-0" tabHeight="0" curSel="0" name="tblDrive" skin="image_white_png">
 				<page name="main" pos="0,0,-0,-0" inset="0,0,0,0">
@@ -17,18 +17,18 @@
 					<imgbtn name="btnCancel" skin="image_cancel_png" pos="-155,{" />
 				</page>
 				<page name="install" pos="0,0,-0,-0" inset="0,0,0,0">
-					<text pos="155,20" font="face:微软雅黑,size:18" Colortext="#000000" multiLines="1" align="center" readOnly="1" transparent="1">正在安装...</text>
+					<text pos="155,20" font="face:微软雅黑,size:18" Colortext="#6b6b6b" multiLines="1" align="center" readOnly="1" transparent="1">正在安装...</text>
 					<gifplayer name="gif_active" pos="|-65,60" skin="image_wait_gif" visible="1" />
 					<hr colorLine="#e5e5e5" size="1" mode="horizontal" pos="0,-41,-0,-40" />
 					<!--imgbtn name="btnCancel" skin="image_cancel_png" pos="150,-37" /-->
 				</page>
 				<page name="finesh" pos="0,0,-0,-0" inset="0,0,0,0">
-					<text pos="155,40" font="face:微软雅黑,size:18" Colortext="#000000" multiLines="1" align="center" readOnly="1" transparent="1">安装成功</text>
+					<text pos="155,40" font="face:微软雅黑,size:18" Colortext="#6b6b6b" multiLines="1" align="center" readOnly="1" transparent="1">安装成功</text>
 					<hr colorLine="#e5e5e5" size="1" mode="horizontal" pos="0,-41,-0,-40" />
 					<imgbtn name="btnOk" skin="image_ok_png" pos="150,-37" />
 				</page>
 				<page name="error" pos="0,0,-0,-0" inset="0,0,0,0">
-					<text pos="150,30" font="face:微软雅黑,size:18" Colortext="#000000" multiLines="1" align="center" readOnly="1" transparent="1">安装失败</text>
+					<text pos="150,30" font="face:微软雅黑,size:18" Colortext="#6b6b6b" multiLines="1" align="center" readOnly="1" transparent="1">安装失败</text>
 					<hr colorLine="#e5e5e5" size="1" mode="horizontal" pos="0,-41,-0,-40" />
 					<imgbtn name="btnRetry" skin="image_btnReTry_png" pos="70,[+3" />
 					<imgbtn name="btnCancel" skin="image_cancel_png" pos="-155,{" />

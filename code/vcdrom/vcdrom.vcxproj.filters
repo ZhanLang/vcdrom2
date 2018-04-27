@@ -119,6 +119,9 @@
     <ClCompile Include="Downloader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SErrorDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="vcdrom.rc">
@@ -196,6 +199,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Downloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SErrorDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

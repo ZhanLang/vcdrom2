@@ -96,7 +96,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(SOUIPATH)\bin;$(code_dir)\msdk\lib;..\..\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>utilitiesd.lib;souid.lib;setupapi.lib;VirtualCDCtl_d.lib;bzscore_d.lib;bzshlp_d.lib;ImageFormats_d.lib;stdlog_d.lib;syslay_d.lib;jsoncpp_d_mt.lib;Wininet.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>utilitiesd.lib;souid.lib;setupapi.lib;VirtualCDCtl_d.lib;bzscore_d.lib;bzshlp_d.lib;ImageFormats_d.lib;stdlog_d.lib;syslay_d.lib;jsoncpp_d_mt.lib;Wininet.lib;Version.lib;cscomm_mt_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ResourceCompile>
@@ -119,7 +119,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(SOUIPATH)\bin;$(code_dir)\msdk\lib;..\..\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>utilities.lib;soui.lib;VirtualCDCtl_r.lib;bzscore_r.lib;bzshlp_r.lib;ImageFormats_r.lib;stdlog.lib;syslay.lib;jsoncpp_r_mt.lib;Wininet.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>utilities.lib;soui.lib;VirtualCDCtl_r.lib;bzscore_r.lib;bzshlp_r.lib;ImageFormats_r.lib;stdlog.lib;syslay.lib;jsoncpp_r_mt.lib;Wininet.lib;Version.lib;cscomm_mt_r.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ResourceCompile>
@@ -215,6 +215,7 @@
     <ClCompile Include="SBusyDialog.cpp" />
     <ClCompile Include="SChromeTabCtrl.cpp" />
     <ClCompile Include="SDriveDialog.cpp" />
+    <ClCompile Include="SErrorDialog.cpp" />
     <ClCompile Include="SHostDialogEx.cpp" />
     <ClCompile Include="SHostWndEx.cpp" />
     <ClCompile Include="SMountDialog.cpp" />
@@ -247,6 +248,7 @@
     <ClInclude Include="SBusyDialog.h" />
     <ClInclude Include="SChromeTabCtrl.h" />
     <ClInclude Include="SDriveDialog.h" />
+    <ClInclude Include="SErrorDialog.h" />
     <ClInclude Include="SevenUnZipEx.h" />
     <ClInclude Include="SHostDialogEx.h" />
     <ClInclude Include="SHostWndEx.h" />

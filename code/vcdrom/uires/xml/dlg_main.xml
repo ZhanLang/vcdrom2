@@ -9,21 +9,19 @@
 			<imgbtn name="btn_close" skin="image_sys_close_png" tip="关闭" />
 		</caption>
 		<window pos="0,[0,-0,-0" inset="10,10,10,10" colorBkgnd="#f2f5f7">
-			<listview pos="2,[1,-180,-0" name="lv_cd_fix" dividerSize="0" wantTab="0" margin="0,0,0,0" sbSkin="skin_new_scrollbar" colorBkgnd="#FFFFFF">
+			<listview pos="2,[1,-180,-0" name="lv_cd_fix" dividerSize="0" wantTab="0" margin="0,0,0,0" sbSkin="skin_new_scrollbar" colorBkgnd="#FFFFFF" trackMouseEvent="0" focusable="1">
 				<template padding="0,0,0,0" itemHeight="80" trackMouseEvent="0" colorNormal="#FFFFFF" colorSelected="#ffffff" colorHover="#FFFFFF">
 					<window width="64" height="64" pos="20,|-32" colorBkgnd="#ffffff">
 						<icon name="icon" pos="|-16,|-16" />
-						<img  name="defaultIcon" skin="image_defaultIco_png" pos="|-16,|-26"/>
+						<img name="defaultIcon" skin="image_defaultIco_png" pos="|-16,|-26" />
 					</window>
-					
 					<text pos="90,14" name="name" Colortext="#3d3d3d" font="face:微软雅黑,size:20" />
-					<text pos="90,45"  name="path" Colortext="#6b6b6b" font="face:微软雅黑,size:12" dotted="1" width="390"></text>
-					
+					<text pos="90,45" name="path" Colortext="#6b6b6b" font="face:微软雅黑,size:12" dotted="1" width="390" />
 					<text pos="355,14" name="title_os_time" Colortext="#17AD65" font="face:微软雅黑,size:12" />
-					<imgbtn pos="-100,|-11" name="listOpen" skin="image_listBtnOpen_png" />
-					<imgbtn pos="-65,|-11" name="listUnmount" skin="image_listBtnUnMount_png" />
-					<imgbtn pos="-65,|-11" name="listMount" skin="image_listBtnMount_png" />
-					<imgbtn pos="-30,|-11" name="ListRemove" skin="image_listBtnRemove_png" />
+					<imgbtn pos="-100,|-11" name="listOpen" skin="image_listBtnOpen_png" tip="打开盘符"/>
+					<imgbtn pos="-65,|-11" name="listUnmount" skin="image_listBtnUnMount_png" tip="卸载"/>
+					<imgbtn pos="-65,|-11" name="listMount" skin="image_listBtnMount_png" tip="挂载"/>
+					<imgbtn pos="-30,|-11" name="ListRemove" skin="image_listBtnRemove_png" tip="移除"/>
 					<hr colorLine="#f2f5f7" size="3" mode="horizontal" pos="15,-2,-20,-0" />
 				</template>
 			</listview>
@@ -35,6 +33,6 @@
 				<imgbtn name="BtnRemoveAll" skin="image_btnRemove_png" pos="20,[20" cursor="hand" />
 			</window>
 		</window>
-		<shellnotifyicon id="110" menu="SMENU:menu_tray" ico="ICON_LOGO:16" tip="110" />
+		<!--shellnotifyicon id="110" menu="SMENU:menu_tray" ico="ICON_LOGO:16" tip="110" /-->
 	</root>
 </SOUI>

@@ -25,5 +25,5 @@
 
 #define _DefAppName L"VCDRom"
 
-
-#define _Def_HostClassName ustr_encode_embed<nDefNum,'{','7','1','7','7','9','5','E','E','-','1','7','0','1','-','4','6','6','6','-','9','6','F','F','-','9','D','E','F','A','E','1','1','0','F','7','7','}'>()
+//{DA7F8542-D49A-4CC3-A16A-23EDDCCFB208}
+#define _Def_HostClassName ustr_encode_embed<nDefNum,'{','D','A','7','F','8','5','4','2','-','D','4','9','A','-','4','C','C','3','-','A','1','6','A','-','2','3','E','D','D','C','C','F','B','2','0','8','}'>()
