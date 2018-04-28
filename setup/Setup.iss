@@ -3,7 +3,7 @@
 #include 'include\itdownload\it_download.iss'
 #include 'include\sapi\sapi.iss'
 #define MyAppName "极客虚拟光驱2.0"
-#define MyAppVersion "2.0.0.1"
+#define MyAppVersion "2.0.0.2"
 #define MyAppPublisher "极客工作室."
 #define MyAppURL "http://www.jicer.cn/"
 #define MyAppExeName "VCDRom.exe"

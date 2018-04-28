@@ -37,7 +37,7 @@
 				</window>
 				
 				<text pos="2,[10,-2,[25" align="center" font="face:微软雅黑,size:15" colortext="#6b6b6b">重装系统就用装机大师</text>
-				<link skin="image_btnRed_png" pos="2,[10,-2,[50" font="face:微软雅黑,size:20" colortext="#ffffff" align="center" href="www.xt120.cc">极客装机大师</link>
+				<link skin="image_btnRed_png" pos="2,[10,-2,[50" font="face:微软雅黑,size:20" colortext="#ffffff" align="center" href="www.xt120.cc/?t=vcdrom">极客装机大师</link>
 			</window>
 		</window>
 		<!--shellnotifyicon id="110" menu="SMENU:menu_tray" ico="ICON_LOGO:16" tip="110" /-->

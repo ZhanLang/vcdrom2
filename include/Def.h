@@ -6,8 +6,8 @@
 
 #define _Def_Prod		AppProd_vcdrom
 
-#define _Def_Version	L"2.0.1.6"
-#define _Def_Packet		2016
+#define _Def_Version	L"2.0.0.2"
+#define _Def_Packet		2002
 
 
 #define _Def_Oper		0
