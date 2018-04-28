@@ -4,7 +4,7 @@
 		<caption pos="0,0,-0,50" show="1" font="adding:0" skin="image_bk_png">
 			<img pos="10,10" skin="image_logo_png" />
 			<text pos="50,11" font="face:微软雅黑,size:20" colortext="#ffffff">@string/title</text>
-			<imgbtn name="btn_menu" skin="image_sys_menu_png" pos="-155,0" />
+			<imgbtn name="btn_menu" skin="image_sys_menu_png" pos="-155,0" visible="0"/>
 			<imgbtn name="btn_min" skin="image_sys_min_png" />
 			<imgbtn name="btn_close" skin="image_sys_close_png" tip="关闭" />
 		</caption>
@@ -18,10 +18,10 @@
 					<text pos="90,14" name="name" Colortext="#3d3d3d" font="face:微软雅黑,size:20" />
 					<text pos="90,45" name="path" Colortext="#6b6b6b" font="face:微软雅黑,size:12" dotted="1" width="390" />
 					<text pos="355,14" name="title_os_time" Colortext="#17AD65" font="face:微软雅黑,size:12" />
-					<imgbtn pos="-100,|-11" name="listOpen" skin="image_listBtnOpen_png" tip="打开盘符"/>
-					<imgbtn pos="-65,|-11" name="listUnmount" skin="image_listBtnUnMount_png" tip="卸载"/>
-					<imgbtn pos="-65,|-11" name="listMount" skin="image_listBtnMount_png" tip="挂载"/>
-					<imgbtn pos="-30,|-11" name="ListRemove" skin="image_listBtnRemove_png" tip="移除"/>
+					<imgbtn pos="-100,|-11" name="listOpen" skin="image_listBtnOpen_png" tip="打开盘符" />
+					<imgbtn pos="-65,|-11" name="listUnmount" skin="image_listBtnUnMount_png" tip="卸载" />
+					<imgbtn pos="-65,|-11" name="listMount" skin="image_listBtnMount_png" tip="挂载" />
+					<imgbtn pos="-30,|-11" name="ListRemove" skin="image_listBtnRemove_png" tip="移除" />
 					<hr colorLine="#f2f5f7" size="3" mode="horizontal" pos="15,-2,-20,-0" />
 				</template>
 			</listview>
@@ -31,6 +31,13 @@
 				<imgbtn name="BtnUnMountAll" skin="image_btnUnMount_png" pos="20,[20" cursor="hand" />
 				<hr colorLine="#f2f5f7" size="1" mode="horizontal" pos="0,[+10,-0,[+3" />
 				<imgbtn name="BtnRemoveAll" skin="image_btnRemove_png" pos="20,[20" cursor="hand" />
+				<hr colorLine="#f2f5f7" size="1" mode="horizontal" pos="0,[+10,-0,[+3" />
+				<window skin="image_slt-m_png" pos="5,[50,-5,[210">
+					<img skin="image_erweima_jpg" pos="2,2,-2,-2" />
+				</window>
+				
+				<text pos="2,[10,-2,[25" align="center" font="face:微软雅黑,size:15" colortext="#6b6b6b">重装系统就用装机大师</text>
+				<link skin="image_btnRed_png" pos="2,[10,-2,[50" font="face:微软雅黑,size:20" colortext="#ffffff" align="center" href="www.xt120.cc">极客装机大师</link>
 			</window>
 		</window>
 		<!--shellnotifyicon id="110" menu="SMENU:menu_tray" ico="ICON_LOGO:16" tip="110" /-->

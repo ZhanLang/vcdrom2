@@ -58,6 +58,9 @@
 		<file name="image_btnOk_png" path="image\btnOk.png" />
 		<file name="image_btnOkBlue_png" path="image\btnOkBlue.png" />
 		<file name="image_btnCancelRed_png" path="image\btnCancelRed.png" />
+		<file name="image_slt-m_png" path="image\slt-m.png" />
+		<file name="image_erweima_jpg" path="image\erweima.jpg" />
+		<file name="image_btnRed_png" path="image\btnRed.png" />
 	</IMG>
 	<ICON>
 		<file name="ICON_LOGO" path="image\logo.ico" />

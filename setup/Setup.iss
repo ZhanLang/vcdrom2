@@ -3,7 +3,7 @@
 #include 'include\itdownload\it_download.iss'
 #include 'include\sapi\sapi.iss'
 #define MyAppName "极客虚拟光驱2.0"
-#define MyAppVersion "1.0.1.6"
+#define MyAppVersion "2.0.0.1"
 #define MyAppPublisher "极客工作室."
 #define MyAppURL "http://www.jicer.cn/"
 #define MyAppExeName "VCDRom.exe"
@@ -30,7 +30,7 @@ DefaultGroupName={#MyAppName}
 LicenseFile=License_cn.txt
 OutputDir=release
 OutputBaseFilename=VCDRomSetup_{#MyDefOper}_{#MyAppVersion}
-SetupIconFile=bin\Logo.ico
+SetupIconFile=Logo.ico
 UninstallDisplayIcon   ={app}\{#MyAppExeName}
 Compression=lzma
 SolidCompression=true
@@ -54,23 +54,26 @@ Name: chinesesimp; MessagesFile: compiler:Languages\ChineseSimp.isl
 
 
 [Files]
-Source: bin\drive\*; DestDir: {app}\drive; Flags: ignoreversion
-Source: bin\drive\sha1\x64\*; DestDir: {app}\drive\sha1\x64; Flags: ignoreversion
-Source: bin\drive\sha1\x86\*; DestDir: {app}\drive\sha1\x86; Flags: ignoreversion
-Source: bin\drive\sha1\*; DestDir: {app}\drive\sha1; Flags: ignoreversion
+Source: ..\bin\drive\*; DestDir: {app}\drive; Flags: ignoreversion
+Source: ..\bin\drive\sha1\x64\*; DestDir: {app}\drive\sha1\x64; Flags: ignoreversion
+Source: ..\bin\drive\sha1\x86\*; DestDir: {app}\drive\sha1\x86; Flags: ignoreversion
+Source: ..\bin\drive\sha1\*; DestDir: {app}\drive\sha1; Flags: ignoreversion
 
-Source: bin\drive\sha256\x64\*; DestDir: {app}\drive\sha256\x64; Flags: ignoreversion
-Source: bin\drive\sha256\x86\*; DestDir: {app}\drive\sha256\x86; Flags: ignoreversion
-Source: bin\drive\sha256\*; DestDir: {app}\drive\sha256; Flags: ignoreversion
-Source: bin\icon\*; DestDir: {app}\icon; Flags: ignoreversion
-Source: bin\*; DestDir: {app}; Flags: ignoreversion
-
+Source: ..\bin\drive\sha256\x64\*; DestDir: {app}\drive\sha256\x64; Flags: ignoreversion
+Source: ..\bin\drive\sha256\x86\*; DestDir: {app}\drive\sha256\x86; Flags: ignoreversion
+Source: ..\bin\drive\sha256\*; DestDir: {app}\drive\sha256; Flags: ignoreversion
+Source: ..\bin\icon\*; DestDir: {app}\icon; Flags: ignoreversion
+Source: ..\bin\DevCmd.exe; DestDir: {app}; Flags: ignoreversion
+Source: ..\bin\vcdrom.exe; DestDir: {app}; Flags: ignoreversion
+Source: ..\bin\stdlog.dll; DestDir: {app}; Flags: ignoreversion
+Source: ..\bin\syslay.dll; DestDir: {app}; Flags: ignoreversion
+Source: ..\bin\uires.7z; DestDir: {app}; Flags: ignoreversion
 [Icons]
 Name: {group}\{#MyAppName}; Filename: {app}\{#MyAppExeName}
 Name: {userdesktop}\{#MyAppName}; Filename: {app}\{#MyAppExeName}
 
 [Run]
-Filename: {app}\DevCmd.exe; Parameters: """install_drv"""; StatusMsg: """正在安装驱动，如果有提示，请予以放行..."""; Flags: runascurrentuser
+Filename: {app}\DevCmd.exe; Parameters: "install_drv"; StatusMsg: """正在安装驱动，如果有提示，请予以放行..."""; Flags: runascurrentuser
 Filename: {app}\{#MyAppExeName}; Description: {cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}; Flags: nowait postinstall skipifsilent
 
 [InstallDelete]

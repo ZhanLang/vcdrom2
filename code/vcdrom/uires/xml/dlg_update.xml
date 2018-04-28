@@ -3,7 +3,6 @@
 	<root skin="image_popwndframe_png" cache="1" inset="10,10,10,10">
 		<window pos="0,0,-0,-0">
 			<caption name="caption" pos="0,0,-0,40" show="1" cache="1" skin="image_bk_png">
-				
 				<text pos="[+10,10" font="face:微软雅黑,size:18" colortext="#ffffff">发现新版本</text>
 				<window pos="36,0,-255,-0" msgTransparent="1" />
 				<imgbtn id="2" skin="image_sys_close_min_png" pos="-40,0" tip="关闭" />

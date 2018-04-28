@@ -2,7 +2,7 @@
 <SOUI name="window" title="@string/title" width="400" height="250" margin="0,5,5,5" appwin="0" ncRect="10,10,10,10" resize="0" translucent="255">
 	<root skin="image_popwndframe_png" cache="1" inset="10,10,10,10">
 		<caption pos="0,0,-0,40" show="1" font="adding:0" skin="image_bk_png">
-			<text name="title" pos="45,10, -45, 30" align="center" font="face:微软雅黑,size:16" colortext="#ffffff" dotted="1"/>
+			<text name="title" pos="45,10, -45, 30" align="center" font="face:微软雅黑,size:16" colortext="#ffffff" dotted="1" />
 			<imgbtn id="2" skin="image_sys_close_min_png" pos="-40,0" tip="关闭" />
 		</caption>
 		<window pos="5,[2,-5,-5">
@@ -12,8 +12,8 @@
 				<editstyle inset="10,0,0,0" vcenter="1" colorText="#ff0000" align="left" colorBkgnd="FFFFFF" dotted="0" />
 			</combobox>
 			<check name="checkOpen" pos="30,90" colortext="rgb(83,95,117)" font="face:微软雅黑,size:18,bold:0" skin="image_checkbox_png" drawFocusRect="0" focusSkin="">挂载完成后打开</check>
-			<imgbtn pos="40,130" id="1" font="face:微软雅黑,size:20,bold:0" skin="image_btnMount_png"/>
-			<imgbtn pos="210,130" id="2" font="face:微软雅黑,size:20,bold:0" skin="image_btnCancelRed_png"/>
+			<imgbtn pos="40,130" id="1" font="face:微软雅黑,size:20,bold:0" skin="image_btnMount_png" />
+			<imgbtn pos="210,130" id="2" font="face:微软雅黑,size:20,bold:0" skin="image_btnCancelRed_png" />
 		</window>
 	</root>
 </SOUI>

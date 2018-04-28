@@ -3,7 +3,6 @@
 	<root skin="image_popwndframe_png" cache="1" inset="10,10,10,10">
 		<window pos="0,0,-0,-0" skin="image_bg_dialog_red_png">
 			<caption name="caption" pos="0,0,-0,40" show="2" cache="1">
-				
 				<text pos="[+10,8" font="face:微软雅黑,size:18" colortext="#ffffff">驱动程序异常</text>
 				<window pos="36,0,-255,-0" msgTransparent="1" />
 				<imgbtn id="2" skin="image_sys_close_min_png" pos="-40,0" tip="关闭" />

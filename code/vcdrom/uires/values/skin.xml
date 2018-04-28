@@ -40,4 +40,7 @@
 	<imglist src="IMG:image_btnOk_png" name="image_btnOk_png" states="3" />
 	<imglist src="IMG:image_btnOkBlue_png" name="image_btnOkBlue_png" states="3" />
 	<imglist src="IMG:image_btnCancelRed_png" name="image_btnCancelRed_png" states="3" />
+	<imgframe src="IMG:image_slt-m_png" name="image_slt-m_png" margin="6,6,6,6" />
+	<imgframe src="IMG:image_erweima_jpg" name="image_erweima_jpg" />
+	<imglist src="IMG:image_btnRed_png" name="image_btnRed_png" states="3"/>
 </skin>
