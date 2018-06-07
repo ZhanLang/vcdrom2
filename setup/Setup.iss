@@ -3,12 +3,21 @@
 #include 'include\itdownload\it_download.iss'
 #include 'include\sapi\sapi.iss'
 #define MyAppName "极客虚拟光驱2.0"
-#define MyAppVersion "2.0.0.2"
+
+
+#define MyAppVersion "2.0.0.3"
+#define PacketID  	  2003 ;包ID
+
 #define MyAppPublisher "极客工作室."
 #define MyAppURL "http://www.jicer.cn/"
 #define MyAppExeName "VCDRom.exe"
 #define MyDefOper    "0"          ;默认渠道ID
 
+
+#define ProID		2;产品ID
+#define ApiHost "http://update.jwhss.com"
+#define InstallUri  "install"
+#define UninstallUri "uninstall"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -29,7 +38,7 @@ DefaultGroupName={#MyAppName}
 
 LicenseFile=License_cn.txt
 OutputDir=release
-OutputBaseFilename=VCDRomSetup_{#MyDefOper}_{#MyAppVersion}
+OutputBaseFilename={#MyAppName}_{#MyDefOper}_{#MyAppVersion}
 SetupIconFile=Logo.ico
 UninstallDisplayIcon   ={app}\{#MyAppExeName}
 Compression=lzma
@@ -95,60 +104,70 @@ Root: HKCR; Subkey: {#MyAppName}\DefaultIcon; ValueData: {app}\icon\iso.ico; Val
 Root: HKCR; Subkey: {#MyAppName}\shell\open\command; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; ValueType: string; ValueName: 
 
 [Code]
-procedure Explode(var Dest: TArrayOfString; Text: String; Separator: String);
-var
-  i, p: Integer;
-begin
-  i := 0;
-  repeat
-    SetArrayLength(Dest, i+1);
-    p := Pos(Separator,Text);
-    if p > 0 then begin
-      Dest[i] := Copy(Text, 1, p-1);
-      Text := Copy(Text, p + Length(Separator), Length(Text));
-      i := i + 1;
-    end else begin
-      Dest[i] := Text;
-      Text := '';
-    end;
-  until Length(Text)=0;
-end;
 
-const wbemFlagForwardOnly = $00000020;
+var oper:String;
 
-procedure CloseApp(AppName: String);
-var
-  WbemLocator : Variant;
-  WMIService   : Variant;
-  WbemObjectSet: Variant;
-  WbemObject   : Variant;
-begin;
-  WbemLocator := CreateOleObject('WbemScripting.SWbemLocator');
-  WMIService := WbemLocator.ConnectServer('localhost', 'root\CIMV2');
-  WbemObjectSet := WMIService.ExecQuery('SELECT * FROM Win32_Process Where Name="' + AppName + '"');
-  if not VarIsNull(WbemObjectSet) and (WbemObjectSet.Count > 0) then
-  begin
-    WbemObject := WbemObjectSet.ItemIndex(0);
-    if not VarIsNull(WbemObject) then
-    begin
-      WbemObject.Terminate();
-      WbemObject := Unassigned;
-    end;
-  end;
-end;
 
 procedure SetOper();
 var
   strArray: TArrayOfString;
-  oper:String;
+  strFileName : String;
+  strExeName:String;
 begin
     oper:= '{#MyDefOper}';
-    Explode(strArray, ExtractFileName(ParamStr(0)), '_');
-    if GetArrayLength(strArray) > 2 then
-    begin
-      oper:= strArray[1];
-    end;
+	strFileName := Format('极客虚拟光驱_%s.tmp', ['{#MyAppVersion}']);
+	strExeName := ExtractFileName(ParamStr(0));
+	if strFileName = strExeName then
+	begin
+		oper := '360';
+	end
+	else
+	begin	
+		Explode(strArray, ExtractFileName(ParamStr(0)), '_');
+		if GetArrayLength(strArray) > 2 then
+		begin
+		oper:= strArray[1];
+		end;
+	end;
+	
+	
     SetIniString('setting','oper',oper,ExpandConstant('{app}/setting.ini'));
+end;
+
+procedure ReportInstall();
+var 
+    sUserGuid : String;
+	strUrl:String;
+begin
+   sUserGuid := GetUserGuid();
+   strUrl:= Format('%s/%s?uguid=%s&prod=%s&packet=%d&prodver=%s&oper=%s&wow64=%d&osver=%d&ant=%s', \
+   ['{#ApiHost}','{#InstallUri}', sUserGuid, '{#ProID}', {#PacketID}, '{#MyAppVersion}', oper,IsWindowsX64(), GetMicroVersion(),GetAnt()]);
+  
+   log(strUrl);
+   HttpGET( strUrl );
+end;
+
+procedure ReportUnInstall();
+var 
+    sUserGuid : String;
+	strUrl:String;
+
+begin
+	
+	log('Uninstall Oper' + oper);
+   sUserGuid := GetUserGuid();
+   strUrl:= Format('%s/%s?uguid=%s&prod=%s&packet=%d&prodver=%s&oper=%s&wow64=%d&osver=%d&ant=%s', \
+   ['{#ApiHost}','{#UninstallUri}', sUserGuid, '{#ProID}', {#PacketID}, '{#MyAppVersion}', oper,IsWindowsX64(), GetMicroVersion(),GetAnt()]);
+  
+   log(strUrl);
+   HttpGET( strUrl );
+end;
+
+
+procedure OnInstallFinesh();
+begin
+	SetOper();
+	ReportInstall();
 end;
 
 procedure CurStepChanged (CurStep: TSetupStep ) ;
@@ -160,22 +179,27 @@ begin
   end;
   if CurStep = ssDone  then
   begin
-      SetOper();
-
+      OnInstallFinesh();
   end;
 end;
 
 procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
 var winHwnd:  HWND;
 begin
-  if CurUninstallStep = usUninstall then
-    CloseApp('{#MyAppExeName}');
-    DelTree(ExpandConstant('{app}'), True, True, True);
+	if CurUninstallStep = usUninstall then
+	begin
+		CloseApp('{#MyAppExeName}');
+		DelTree(ExpandConstant('{app}'), True, True, True);
+	end;
+	if CurUninstallStep = usUninstall then
+	begin
+		ReportUnInstall();
+	end;
 end;
 
 procedure InitializeWizard();
 begin
-   log(GetUserGuid());
+	
 end;
 
 function InitializeUninstall(): boolean;
@@ -183,13 +207,14 @@ var
   url:string;
 begin
   result:=true;
-
+  FileCopy(ExpandConstant('{app}\sapi.dll'),ExpandConstant('{tmp}\sapi.dll'),False);
+  oper := GetIniString('setting','oper','0',ExpandConstant('{app}/setting.ini'));
 end;
 
 function InitializeSetup(): boolean;
 begin
    result:=true;
-
+	ExtractTemporaryFile('sapi.dll');
 end;
 
 
