@@ -4,8 +4,8 @@
 #define MyAppName "极客虚拟光驱2.0"
 
 
-#define MyAppVersion "2.0.0.3"
-#define PacketID  	  2003 ;包ID
+#define MyAppVersion "2.0.1.1"
+#define PacketID  	  2011 ;包ID
 
 #define MyAppPublisher "极客工作室."
 #define MyAppURL "http://www.jicer.cn/"
@@ -14,7 +14,7 @@
 
 
 #define ProID		2;产品ID
-#define ApiHost "http://update.jwhss.com"
+#define ApiHost "http://update.jicer.cn"
 #define InstallUri  "install"
 #define UninstallUri "uninstall"
 
@@ -35,7 +35,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 
-LicenseFile=License_cn.txt
+;LicenseFile=License_cn.txt
 OutputDir=release
 OutputBaseFilename={#MyAppName}_{#MyDefOper}_{#MyAppVersion}
 SetupIconFile=Logo.ico
@@ -44,8 +44,8 @@ Compression=lzma
 SolidCompression=true
 VersionInfoDescription="{#MyAppName} 安装程序"
 VersionInfoCopyright="{#MyAppURL}"
-DisableWelcomePage=no
-DisableFinishedPage=false
+DisableWelcomePage=yes
+DisableFinishedPage=yes
 
 DisableReadyPage=true
 DisableStartupPrompt=true
@@ -172,7 +172,7 @@ procedure CurStepChanged (CurStep: TSetupStep ) ;
 begin
   if CurStep = ssInstall then
   begin
-     CloseApp('{#MyAppExeName}');
+     TerminateProcessAsName('{#MyAppExeName}');
   end;
   if CurStep = ssDone  then
   begin
@@ -185,7 +185,7 @@ var winHwnd:  HWND;
 begin
 	if CurUninstallStep = usUninstall then
 	begin
-		CloseApp('{#MyAppExeName}');
+		TerminateProcessAsName('{#MyAppExeName}');
 		DelTree(ExpandConstant('{app}'), True, True, True);
 	end;
 	if CurUninstallStep = usUninstall then

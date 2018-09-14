@@ -235,6 +235,7 @@
     <ResourceCompile Include="vcdrom.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Def.h" />
     <ClInclude Include="CDListAdapterFix.h" />
     <ClInclude Include="dlgUpdate.h" />
     <ClInclude Include="Downloader.h" />

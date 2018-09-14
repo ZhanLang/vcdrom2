@@ -6,17 +6,17 @@
 
 #define _Def_Prod		AppProd_vcdrom
 
-#define _Def_Version	L"2.0.0.2"
-#define _Def_Packet		2002
+#define _Def_Version	L"2.0.1.1"
+#define _Def_Packet		2011
 
 
 #define _Def_Oper		0
 #define nDefNum			2
 
 //api.jwhss.com
-#define _Def_ApiHost	str_encode_embed<nDefNum,'a','p','i','.','j','w','h','s','s','.','c','o','m'>()
+#define _Def_ApiHost	"api.jicer.cn"//str_encode_embed<nDefNum,'a','p','i','.','j','w','h','s','s','.','c','o','m'>()
 
-#define _Def_UpdateHost str_encode_embed<nDefNum,'u','p','d','a','t','e','.','j','w','h','s','s','.','c','o','m'>()
+#define _Def_UpdateHost "update.jicer.cn"//str_encode_embed<nDefNum,'u','p','d','a','t','e','.','j','w','h','s','s','.','c','o','m'>()
 
 
 //vcdrom2/update
