@@ -87,7 +87,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(BZSLIB_PATH);..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;..\..\BazisLib;..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CONSOLE;_X86_;_DDK_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <ExceptionHandling>
@@ -118,7 +118,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(BZSLIB_PATH);..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;..\..\BazisLib;..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <ExceptionHandling>
@@ -156,7 +156,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(BZSLIB_PATH);..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;..\..\BazisLib;..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CONSOLE;_X86_;_DDK_;_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <StringPooling>true</StringPooling>
@@ -193,7 +193,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(BZSLIB_PATH);..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;..\..\BazisLib;..\..\stlport-kernel\stlport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <StringPooling>true</StringPooling>

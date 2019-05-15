@@ -50,7 +50,7 @@ namespace BazisLib
 		iwstring(const wchar_t *str, size_t len)
 			: _base(str, len)
 		{}
-
+		 
 		operator std::wstring() const
 		{
 			return std::wstring(c_str());
